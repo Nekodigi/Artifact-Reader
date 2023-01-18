@@ -2,7 +2,15 @@ import { Mat, MinMaxLoc, Rect } from "@techstark/opencv-js";
 import React, { useEffect, useRef, useState } from "react";
 import cv from "@techstark/opencv-js";
 import Tesseract from "tesseract.js";
-import { ArtifactScan } from "../../utils/func/artifactScan";
+import { ArtifactScan, ArtifactScanStr } from "../../utils/func/artifactScan";
+import genshindb, { Language } from "genshin-db";
+import { artifactKey } from "../../utils/consts/Artifact";
+import { similarity } from "../../utils/func/string";
+import {
+  str2artifactSet,
+  str2stat,
+  str2stats,
+} from "../../utils/func/strToArtifact";
 
 export const TemplateMatching = () => {
   const targetImgRef = useRef<HTMLCanvasElement>(null);
@@ -16,6 +24,7 @@ export const TemplateMatching = () => {
   const starImgRef = useRef<HTMLCanvasElement>(null);
   const levelImgRef = useRef<HTMLCanvasElement>(null);
   const substatImgRef = useRef<HTMLCanvasElement>(null);
+  const dummyImgRef = useRef<HTMLCanvasElement>(null);
   const [name, setName] = useState("name");
   const [part, setPart] = useState("part");
   const [mainKey, setMainKey] = useState("mainKey");
@@ -39,6 +48,22 @@ export const TemplateMatching = () => {
   //slim width: 272? padding: 20
 
   let scale = 1.5; //small faster large precise
+
+  useEffect(() => {
+    console.log(genshindb.artifacts("BloodstainedChivalry"));
+    let str = "Flower of Creviced Cliff";
+    const startTime = performance.now();
+
+    let t = str2stats(
+      "会 心 ダ メ ー ジ +⑤.④%\n攻 撃 カ +④.①%\n防 御 カ +⑥.⑥%",
+      Language.Japanese
+    );
+    console.log(t);
+
+    let res = str2artifactSet("迷唇の遊密", Language.Japanese);
+    console.log(res);
+    console.log(performance.now() - startTime);
+  }, []);
 
   useEffect(() => {
     if (img === null || templateImgs[0] !== null) return;
@@ -85,18 +110,24 @@ export const TemplateMatching = () => {
         nameImgRef
       );
       console.log(res);
+      //img will break after reading??
     };
+    visualScan(img, templateImgs[1]!, templateImgs[0]!, templateImgs[2]!);
     t();
+
+    //visualScan(img, templateImgs[1]!, templateImgs[0]!, templateImgs[2]!);
 
     //visualScan(img, templateImgs[1], templateImgs[0], templateImgs[2]);
   }, [img, templateImgs]);
 
   const visualScan = (
-    img: cv.Mat,
+    img_: cv.Mat,
     left: cv.Mat,
     right: cv.Mat,
     mid: cv.Mat
   ) => {
+    let img = new cv.Mat();
+    img_.copyTo(img);
     let aspect = img.size().width / img.size().height;
     cv.resize(img, img, new cv.Size(1280 * scale, (1280 * scale) / aspect)); //* RESIZE FOR FASTER RES,
     console.log(img.size());
@@ -151,7 +182,7 @@ export const TemplateMatching = () => {
 
     let midSeparator = maxPoint.y + mid.rows / 2;
     let topHalfHeight = 189;
-    let topHalfBottom = 152;
+    let topHalfBottom = 156;
     let topHalfR = new cv.Rect(
       12,
       midSeparator - topHalfHeight * scale,
@@ -176,7 +207,7 @@ export const TemplateMatching = () => {
     let level1p = new cv.Point(24 * scale, 208 * scale);
     let level2p = new cv.Point((24 + 32) * scale, (208 + 16) * scale);
     let substat1p = new cv.Point(32 * scale, 237 * scale);
-    let substat2p = new cv.Point((32 + 198) * scale, (237 + 102) * scale);
+    let substat2p = new cv.Point((32 + 198) * scale, (237 + 106) * scale);
 
     imshowTrimmed(mainKeyImgRef, trimmedImg, 1, -135, mainKey1p, mainKey2p);
     imshowTrimmed(
@@ -189,7 +220,7 @@ export const TemplateMatching = () => {
     );
     imshowTrimmed(starImgRef, trimmedImg, 1, -150, star1p, star2p);
     imshowTrimmed(levelImgRef, trimmedImg, 1, -150, level1p, level2p);
-    imshowTrimmed(substatImgRef, trimmedImg, 1, 130, substat1p, substat2p);
+    imshowTrimmed(substatImgRef, trimmedImg, 1, 140, substat1p, substat2p);
     console.log("showTextImg");
 
     const fname = async () => {
@@ -353,6 +384,7 @@ export const TemplateMatching = () => {
         />
       </div>
 
+      <canvas ref={dummyImgRef} style={{ display: "none" }} />
       <div className="image-card">
         <div style={{ margin: "10px" }}>↓↓↓ The text image ↓↓↓{name}</div>
         <canvas ref={nameImgRef} />

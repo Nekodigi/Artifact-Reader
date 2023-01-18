@@ -1,30 +1,20 @@
-export type mainstatKey =
-  | "hp"
-  | "hp_"
-  | "atk"
-  | "atk_"
-  | "def"
-  | "def_"
-  | "eleMas"
-  | "enerRech";
-
-export const mainstatDef = {
-  hp: {
-    name: { ja: "HP" },
-  },
-  atk: {
-    name: { ja: "HP" },
-  },
-  hp_: {
-    name: { ja: "HP" },
-  },
-  atk_: {
-    name: { ja: "HP" },
-  },
-  def_: {
-    name: { ja: "HP" },
-  },
-  eleMas: {
-    name: { ja: "HP" },
-  },
-};
+export const mainstatKey = [
+  "hp",
+  "hp_",
+  "atk",
+  "atk_",
+  "def_",
+  "eleMas",
+  "enerRech_",
+  "heal_",
+  "critRate_",
+  "critDMG_",
+  "physical_dmg_",
+  "anemo_dmg_",
+  "geo_dmg_",
+  "electro_dmg_",
+  "hydro_dmg_",
+  "pyro_dmg_",
+  "cryo_dmg_",
+  "dendro_dmg_",
+];

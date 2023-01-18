@@ -45,7 +45,8 @@ const statDef = {
   },
   heal_: {
     weight: 0,
-    name: { en: "Healing Bonus" },
+    name: { en: "Healing Bonus", ja: "与える治療効果" },
+    table: [4.53, 5.18, 5.83, 6.48],
   },
   critRate_: {
     weight: 2,
@@ -60,30 +61,42 @@ const statDef = {
 
   physical_dmg_: {
     weight: 0,
-    name: { en: "Physical DMG Bonus" },
+    name: { en: "Physical DMG Bonus", ja: "物理ダメージバフ" },
     table: [0, 0, 0, 0],
   },
   anemo_dmg_: {
     weight: 0,
-    name: { en: "Anemo DMG Bonus" },
+    name: { en: "Anemo DMG Bonus", ja: "風元素ダメージ" },
     table: [0, 0, 0, 0],
   },
-  geo_dmg_: { weight: 0, name: { en: "Geo DMG Bonus" }, table: [0, 0, 0, 0] },
+  geo_dmg_: {
+    weight: 0,
+    name: { en: "Geo DMG Bonus", ja: "岩元素ダメージ" },
+    table: [0, 0, 0, 0],
+  },
   electro_dmg_: {
     weight: 0,
-    name: { en: "Electro DMG Bonus" },
+    name: { en: "Electro DMG Bonus", ja: "雷元素ダメージ" },
     table: [0, 0, 0, 0],
   },
   hydro_dmg_: {
     weight: 0,
-    name: { en: "Hydro DMG Bonus" },
+    name: { en: "Hydro DMG Bonus", ja: "水元素ダメージ" },
     table: [0, 0, 0, 0],
   },
-  pyro_dmg_: { weight: 0, name: { en: "Pyro DMG Bonus" }, table: [0, 0, 0, 0] },
-  cryo_dmg_: { weight: 0, name: { en: "Cryo DMG Bonus" }, table: [0, 0, 0, 0] },
+  pyro_dmg_: {
+    weight: 0,
+    name: { en: "Pyro DMG Bonus", ja: "炎元素ダメージ" },
+    table: [0, 0, 0, 0],
+  },
+  cryo_dmg_: {
+    weight: 0,
+    name: { en: "Cryo DMG Bonus", ja: "氷元素ダメージ" },
+    table: [0, 0, 0, 0],
+  },
   dendro_dmg_: {
     weight: 0,
-    name: { en: "Dendro DMG Bonus" },
+    name: { en: "Dendro DMG Bonus", ja: "草元素ダメージ" },
     table: [0, 0, 0, 0],
   },
   ERR: {
@@ -95,3 +108,26 @@ const statDef = {
 } as const;
 
 export { statDef };
+
+export const statKey = [
+  "hp",
+  "hp_",
+  "atk",
+  "atk_",
+  "def",
+  "def_",
+  "eleMas",
+  "enerRech_",
+  "heal_",
+  "critRate_",
+  "critDMG_",
+  "physical_dmg_",
+  "anemo_dmg_",
+  "geo_dmg_",
+  "electro_dmg_",
+  "hydro_dmg_",
+  "pyro_dmg_",
+  "cryo_dmg_",
+  "dendro_dmg_",
+];
+export type statKeyType = keyof typeof statDef;

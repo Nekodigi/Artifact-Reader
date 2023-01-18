@@ -1,20 +1,31 @@
 import cv, { MinMaxLoc, Rect } from "@techstark/opencv-js";
+import { Language } from "genshin-db";
 import Tesseract from "tesseract.js";
+import { statKeyType } from "../consts/Stat";
+import { isAlphabet } from "./string";
+import { str2artifactSet, str2stat, str2stats } from "./strToArtifact";
 
 export type ScanRes = {
   value: string;
   confidence: number;
 };
+export type ScanResNum = {
+  value: number;
+  confidence: number;
+};
+export type ScanResStat = {
+  key: statKeyType;
+  value: number;
+  confidence: number;
+};
 
-//scale change sample size: larger precise, smaller faster
 export type ArtifactScanOut = {
-  name: ScanRes;
+  key: ScanRes;
   part: ScanRes;
-  mainKey: ScanRes;
-  mainValue: ScanRes;
-  star: ScanRes;
-  level: ScanRes;
-  substat: ScanRes;
+  main: ScanResStat;
+  star: ScanResNum;
+  level: ScanResNum;
+  substat: ScanResStat[];
 };
 export const ArtifactScan = async (
   src: cv.Mat,
@@ -24,7 +35,55 @@ export const ArtifactScan = async (
   mid: cv.Mat,
   buf: React.RefObject<HTMLCanvasElement>
 ) => {
+  let strs = await ArtifactScanStr(src, scale, left, right, mid, buf);
+  console.log(strs);
+  let lang = isAlphabet(strs.name.value.charAt(0))
+    ? Language.English
+    : Language.Japanese;
   let res = {} as ArtifactScanOut;
+  let keyPart = str2artifactSet(strs.name.value, lang);
+  res.key = { value: keyPart.key, confidence: keyPart.confidence };
+  res.part = { value: keyPart.part, confidence: keyPart.confidence };
+  let mainstat = str2stat(
+    strs.mainKey.value + "+" + strs.mainValue.value,
+    lang
+  );
+  res.main = mainstat;
+  res.star = {
+    value: strs.star.value.replace(/\s/g, "").length,
+    confidence: strs.star.confidence,
+  };
+  res.level = {
+    value: Number(strs.level.value.replace(/^\D+/g, "")),
+    confidence: strs.level.confidence,
+  };
+  //need some fix
+  res.substat = str2stats(strs.substat.value, lang);
+  return res;
+};
+
+//scale change sample size: larger precise, smaller faster
+export type ArtifactScanStrOut = {
+  name: ScanRes;
+  part: ScanRes;
+  mainKey: ScanRes;
+  mainValue: ScanRes;
+  star: ScanRes;
+  level: ScanRes;
+  substat: ScanRes;
+};
+export const ArtifactScanStr = async (
+  src_: cv.Mat,
+  scale: number,
+  left: cv.Mat,
+  right: cv.Mat,
+  mid: cv.Mat,
+  buf: React.RefObject<HTMLCanvasElement>
+) => {
+  let src = new cv.Mat();
+  src_.copyTo(src);
+
+  let res = {} as ArtifactScanStrOut;
 
   let aspect = src.size().width / src.size().height;
   cv.resize(src, src, new cv.Size(1280 * scale, (1280 * scale) / aspect)); //* RESIZE FOR FASTER RES,
@@ -72,7 +131,7 @@ export const ArtifactScan = async (
 
   let midSeparator = maxPoint.y + mid.rows / 2;
   let topHalfHeight = 189;
-  let topHalfBottom = 152;
+  let topHalfBottom = 156;
   let topHalfR = new cv.Rect(
     12,
     midSeparator - topHalfHeight * scale,
@@ -97,7 +156,7 @@ export const ArtifactScan = async (
   let level1p = new cv.Point(24 * scale, 208 * scale);
   let level2p = new cv.Point((24 + 32) * scale, (208 + 16) * scale);
   let substat1p = new cv.Point(32 * scale, 237 * scale);
-  let substat2p = new cv.Point((32 + 198) * scale, (237 + 102) * scale);
+  let substat2p = new cv.Point((32 + 198) * scale, (237 + 106) * scale);
 
   console.log("showTextImg");
 
@@ -148,7 +207,7 @@ export const ArtifactScan = async (
   };
 
   const fsubstat = async () => {
-    imshowTrimmed(buf, trimmedImg, 1, 130, substat1p, substat2p);
+    imshowTrimmed(buf, trimmedImg, 1, 140, substat1p, substat2p);
     let result = await Tesseract.recognize(buf.current!.toDataURL(), "jpn");
     res.substat = {
       value: result.data.text,
