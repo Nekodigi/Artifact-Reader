@@ -5,7 +5,7 @@ import {
   slotKeyType,
 } from "../consts/Artifact";
 import { similarity } from "./string";
-import genshindb, { Language } from "genshin-db";
+import { Language, artifacts } from "genshin-db";
 import { substatKey } from "../consts/Substat";
 import { statDef, statKey, statKeyType } from "../consts/Stat";
 
@@ -23,7 +23,7 @@ export const str2artifactSet = (
   let part_: slotKeyType = "circlet";
 
   setKey.forEach((key) => {
-    let a = genshindb.artifacts(key, {
+    let a = artifacts(key, {
       resultLanguage: lang,
     })!;
     slotKey.forEach((part) => {

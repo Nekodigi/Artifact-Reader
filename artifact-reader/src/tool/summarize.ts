@@ -1,8 +1,9 @@
-import genshindb from "genshin-db";
+import genshindb, { Language } from "genshin-db";
 import { setKey } from "../utils/consts/Artifact";
+import fs from "fs";
 
 type ArtifactData = {
-  name: string;
+  name: { en: string; ja: string };
 };
 type ArtifactDB = {
   flower?: ArtifactData;
@@ -14,17 +15,35 @@ type ArtifactDB = {
 type extractArtifactSetOut = {
   [key: string]: ArtifactDB;
 };
-export const extractArtifactSet = () => {
-  let dbs = setKey.map((key) => {
-    let set = genshindb.artifacts(key)!;
+const extractArtifactSet = () => {
+  let dbs: extractArtifactSetOut = {};
+  setKey.map((key) => {
+    let setEn = genshindb.artifacts(key)!;
+    let setJa = genshindb.artifacts(key, {
+      resultLanguage: Language.Japanese,
+    })!;
     let db: ArtifactDB = {
-      flower: set.flower,
-      plume: set.plume,
-      sands: set.sands,
-      goblet: set.goblet,
-      circlet: set.circlet,
+      flower: setEn.flower
+        ? { name: { en: setEn.flower.name, ja: setJa.flower!.name } }
+        : undefined,
+      plume: setEn.plume
+        ? { name: { en: setEn.plume.name, ja: setJa.plume!.name } }
+        : undefined,
+      sands: setEn.sands
+        ? { name: { en: setEn.sands.name, ja: setJa.sands!.name } }
+        : undefined,
+      goblet: setEn.goblet
+        ? { name: { en: setEn.goblet.name, ja: setJa.goblet!.name } }
+        : undefined,
+      circlet: { name: { en: setEn.circlet.name, ja: setJa.circlet.name } },
     };
-    return db;
+    dbs[key] = db;
   });
-  console.log(dbs);
+  //console.log(dbs);
+  fs.writeFileSync(
+    "./genshindb-partial.json",
+    JSON.stringify(dbs, null, 2),
+    "utf-8"
+  );
 };
+extractArtifactSet();

@@ -1,7 +1,6 @@
 {
   "name": "artifact-reader",
   "version": "0.1.0",
-  "homepage": "https://nekodigi.github.io/Artifact-Reader/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",

@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import cv from "@techstark/opencv-js";
 import Tesseract from "tesseract.js";
 import { ArtifactScan, ScanRes2GOOD } from "../../utils/func/artifactScan";
-import genshindb, { Language } from "genshin-db";
 
 const TemplateMatching = () => {
   const targetImgRef = useRef<HTMLCanvasElement>(null);
@@ -342,6 +341,8 @@ const TemplateMatching = () => {
           }}
         />
       </div>
+      <img src="/template/left.png" />
+      <img src="logo512.png" />
 
       <div style={{ marginTop: "30px" }}>
         <span style={{ marginRight: "10px" }}>

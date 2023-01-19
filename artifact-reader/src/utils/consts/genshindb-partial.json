@@ -1,0 +1,1282 @@
+[
+  {
+    "flower": {
+      "name": {
+        "en": "Adventurer's Flower",
+        "ja": "冒険者の花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Adventurer's Tail Feather",
+        "ja": "冒険者の羽根"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Adventurer's Pocket Watch",
+        "ja": "冒険者の懐中時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Adventurer's Golden Goblet",
+        "ja": "冒険者の金杯"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Adventurer's Bandana",
+        "ja": "冒険者のバンダナ"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Flower of Creviced Cliff",
+        "ja": "盤石芽生の花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Feather of Jagged Peaks",
+        "ja": "嵯峨連山の翼"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Sundial of Enduring Jade",
+        "ja": "星羅圭玉の日時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Goblet of Chiseled Crag",
+        "ja": "危岩磐石の杯"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Mask of Solitude Basalt",
+        "ja": "不動玄石の相"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Berserker's Rose",
+        "ja": "狂戦士の薔薇"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Berserker's Indigo Feather",
+        "ja": "狂戦士の羽根"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Berserker's Timepiece",
+        "ja": "狂戦士の時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Berserker's Bone Goblet",
+        "ja": "狂戦士のコップ"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Berserker's Battle Mask",
+        "ja": "狂戦士の仮面"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Snowswept Memory",
+        "ja": "吹雪の中の思い"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Icebreaker's Resolve",
+        "ja": "氷を砕く執念"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Frozen Homeland's Demise",
+        "ja": "雪覆う故郷の最後"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Frost-Weaved Dignity",
+        "ja": "霜を纏った気骨"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Broken Rime's Echo",
+        "ja": "氷雪を踏む音"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Bloodstained Flower of Iron",
+        "ja": "血染めの鉄の心"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Bloodstained Black Plume",
+        "ja": "血染めの黒羽"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Bloodstained Final Hour",
+        "ja": "騎士が血に染めた時"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Bloodstained Chevalier's Goblet",
+        "ja": "血染めの騎士のコップ"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Bloodstained Iron Mask",
+        "ja": "血染めの鉄仮面"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Medal of the Brave",
+        "ja": "勇士の勲章"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Prospect of the Brave",
+        "ja": "勇士の期待"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Fortitude of the Brave",
+        "ja": "勇士の毅然"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Outset of the Brave",
+        "ja": "勇士の壮行"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Crown of the Brave",
+        "ja": "勇士の冠"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Witch's Flower of Blaze",
+        "ja": "魔女の炎の花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Witch's Ever-Burning Plume",
+        "ja": "魔女の炎の羽根"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Witch's End Time",
+        "ja": "魔女の破滅の時"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Witch's Heart Flames",
+        "ja": "魔女の心の炎"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Witch's Scorching Hat",
+        "ja": "焦げた魔女の帽子"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Labyrinth Wayfarer",
+        "ja": "迷宮の遊客"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Scholar of Vines",
+        "ja": "翠蔓の知者"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "A Time of Insight",
+        "ja": "賢知の定期"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Lamp of the Lost",
+        "ja": "迷い人の灯"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Laurel Coronet",
+        "ja": "月桂の宝冠"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Guardian's Flower",
+        "ja": "守護の花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Guardian's Sigil",
+        "ja": "守護の印"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Guardian's Clock",
+        "ja": "守護の置き時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Guardian's Vessel",
+        "ja": "守護の瓶"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Guardian's Band",
+        "ja": "守護の帯"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "The First Days of the City of Kings",
+        "ja": "諸王の都の始まり"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "End of the Golden Realm",
+        "ja": "黄金の邦国の結末"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Timepiece of the Lost Path",
+        "ja": "没落迷途のコア"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Defender of the Enchanting Dream",
+        "ja": "迷酔の長夢の守護"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Legacy of the Desert High-Born",
+        "ja": "流砂の嗣君の遺宝"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Soulscent Bloom",
+        "ja": "魂香の花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Jade Leaf",
+        "ja": "垂玉の葉"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Symbol of Felicitation",
+        "ja": "祭祀の証"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Chalice of the Font",
+        "ja": "湧水の杯"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Flowing Rings",
+        "ja": "浮流の対玉"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Magnificent Tsuba",
+        "ja": "威厳の鍔"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Sundered Feather",
+        "ja": "切落の羽"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Storm Cage",
+        "ja": "雷雲の印籠"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Scarlet Vessel",
+        "ja": "緋花の壺"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Ornate Kabuto",
+        "ja": "華飾の兜"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Ay-Khanoum's Myriad",
+        "ja": "月娘の華彩"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Wilting Feast",
+        "ja": "落謝の宴席"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "A Moment Congealed",
+        "ja": "凝結の刹那"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Secret-Keeper's Magic Bottle",
+        "ja": "守秘の魔瓶"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Amethyst Crown",
+        "ja": "紫晶の花冠"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Gambler's Brooch",
+        "ja": "博徒の花飾り"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Gambler's Feather Accessory",
+        "ja": "博徒の羽飾り"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Gambler's Pocket Watch",
+        "ja": "博徒の懐中時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Gambler's Dice Cup",
+        "ja": "博徒のツボ"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Gambler's Earrings",
+        "ja": "博徒のピアス"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Dreaming Steelbloom",
+        "ja": "夢境の鉄花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Feather of Judgment",
+        "ja": "裁断の羽根"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "The Sunken Years",
+        "ja": "深金の歳月"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Honeyed Final Feast",
+        "ja": "甘露の終宴"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Shadow of the Sand King",
+        "ja": "砂王の投影"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Gladiator's Nostalgia",
+        "ja": "剣闘士の未練"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Gladiator's Destiny",
+        "ja": "剣闘士の帰着"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Gladiator's Longing",
+        "ja": "剣闘士の希望"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Gladiator's Intoxication",
+        "ja": "剣闘士の酩酊"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Gladiator's Triumphus",
+        "ja": "剣闘士の凱旋"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Gilded Corsage",
+        "ja": "金メッキのコサージュ"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Gust of Nostalgia",
+        "ja": "追憶の風"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Copper Compass",
+        "ja": "堅い銅のコンパス"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Goblet of Thundering Deep",
+        "ja": "浮沈の杯"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Wine-Stained Tricorne",
+        "ja": "酒に漬けた帽子"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Bloom Times",
+        "ja": "栄花の期"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Plume of Luxury",
+        "ja": "華館の羽"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Song of Life",
+        "ja": "衆生の歌"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Calabash of Awakening",
+        "ja": "夢醒の瓢箪"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Skeletal Hat",
+        "ja": "形骸の笠"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Instructor's Brooch",
+        "ja": "教官の花飾り"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Instructor's Feather Accessory",
+        "ja": "教官の羽飾り"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Instructor's Pocket Watch",
+        "ja": "教官の懐中時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Instructor's Tea Cup",
+        "ja": "教官のティーカップ"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Instructor's Cap",
+        "ja": "教官の帽子"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Lavawalker's Resolution",
+        "ja": "火渡りの堅実"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Lavawalker's Salvation",
+        "ja": "火渡りの解放"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Lavawalker's Torment",
+        "ja": "火渡りの苦しみ"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Lavawalker's Epiphany",
+        "ja": "火渡りの悟り"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Lavawalker's Wisdom",
+        "ja": "火渡りの知恵"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Lucky Dog's Clover",
+        "ja": "幸運のクローバー"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Lucky Dog's Eagle Feather",
+        "ja": "幸運の鷹の羽根"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Lucky Dog's Hourglass",
+        "ja": "幸運の砂時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Lucky Dog's Goblet",
+        "ja": "幸運のコップ"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Lucky Dog's Silver Circlet",
+        "ja": "幸運の冠"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Maiden's Distant Love",
+        "ja": "彼方にある少女の心"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Maiden's Heart-stricken Infatuation",
+        "ja": "少女の揺らぐ思い"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Maiden's Passing Youth",
+        "ja": "少女の短い華年"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Maiden's Fleeting Leisure",
+        "ja": "少女の暫く息抜き"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Maiden's Fading Beauty",
+        "ja": "少女の儚き顔"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Martial Artist's Red Flower",
+        "ja": "武人の赤い花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Martial Artist's Feather Accessory",
+        "ja": "武人の羽飾り"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Martial Artist's Water Hourglass",
+        "ja": "武人の水時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Martial Artist's Wine Cup",
+        "ja": "武人の酒器"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Martial Artist's Bandana",
+        "ja": "武人のバンダナ"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Royal Flora",
+        "ja": "旧貴族の花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Royal Plume",
+        "ja": "旧貴族の羽根"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Royal Pocket Watch",
+        "ja": "旧貴族の時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Royal Silver Urn",
+        "ja": "旧貴族の銀瓶"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Royal Masque",
+        "ja": "旧貴族の仮面"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Sea-Dyed Blossom",
+        "ja": "海染の花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Deep Palace's Plume",
+        "ja": "淵宮の羽"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Cowry of Parting",
+        "ja": "別れの貝"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Pearl Cage",
+        "ja": "真珠の籠"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Crown of Watatsumi",
+        "ja": "海祇の冠"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Stainless Bloom",
+        "ja": "無垢の花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Wise Doctor's Pinion",
+        "ja": "良医の羽"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Moment of Cessation",
+        "ja": "停頓の時"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Surpassing Cup",
+        "ja": "超越の盃"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Mocking Mask",
+        "ja": "嗤笑の面"
+      }
+    }
+  },
+  {
+    "circlet": {
+      "name": {
+        "en": "Tiara of Torrents",
+        "ja": "水祭りの冠"
+      }
+    }
+  },
+  {
+    "circlet": {
+      "name": {
+        "en": "Tiara of Flame",
+        "ja": "火祭りの冠"
+      }
+    }
+  },
+  {
+    "circlet": {
+      "name": {
+        "en": "Tiara of Thunder",
+        "ja": "雷祭りの冠"
+      }
+    }
+  },
+  {
+    "circlet": {
+      "name": {
+        "en": "Tiara of Frost",
+        "ja": "氷祭りの冠"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Heart of Comradeship",
+        "ja": "故人の心"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Feather of Homecoming",
+        "ja": "帰郷の羽"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Sundial of the Sojourner",
+        "ja": "逐光の石"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Goblet of the Sojourner",
+        "ja": "異国の杯"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Crown of Parting",
+        "ja": "別離の冠"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Summer Night's Bloom",
+        "ja": "夏祭りの花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Summer Night's Finale",
+        "ja": "夏祭りの終わり"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Summer Night's Moment",
+        "ja": "夏祭りの刻"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Summer Night's Waterballoon",
+        "ja": "夏祭りの水風船"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Summer Night's Mask",
+        "ja": "夏祭りの仮面"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Scholar's Bookmark",
+        "ja": "学者のしおり"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Scholar's Quill Pen",
+        "ja": "学者の羽根ペン"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Scholar's Clock",
+        "ja": "学者の時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Scholar's Ink Cup",
+        "ja": "学者のコップ"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Scholar's Lens",
+        "ja": "学者のレンズ"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Entangling Bloom",
+        "ja": "羈絆の花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Shaft of Remembrance",
+        "ja": "憶念の矢"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Morning Dew's Moment",
+        "ja": "朝露の時"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Hopeful Heart",
+        "ja": "祈望の心"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Capricious Visage",
+        "ja": "無常の面"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Flower of Accolades",
+        "ja": "偉勲の花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Ceremonial War-Plume",
+        "ja": "昭武の羽根"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Orichalceous Time-Dial",
+        "ja": "金銅の日時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Noble's Pledging Vessel",
+        "ja": "誓いの金杯"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "General's Ancient Helm",
+        "ja": "将帥の兜"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Exile's Flower",
+        "ja": "亡命者の花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Exile's Feather",
+        "ja": "亡命者の羽根"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Exile's Pocket Watch",
+        "ja": "亡命者の懐中時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Exile's Goblet",
+        "ja": "亡命者のコップ"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Exile's Circlet",
+        "ja": "亡命者の冠"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Thunderbird's Mercy",
+        "ja": "雷鳥の憐み"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Survivor of Catastrophe",
+        "ja": "雷災の生存者"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Hourglass of Thunder",
+        "ja": "雷霆の時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Omen of Thunderstorm",
+        "ja": "落雷の前兆"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Thunder Summoner's Crown",
+        "ja": "雷を呼ぶ冠"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Thundersoother's Heart",
+        "ja": "雷討ちの心"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Thundersoother's Plume",
+        "ja": "雷討ちの羽根"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Hour of Soothing Thunder",
+        "ja": "雷討ちの刻"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Thundersoother's Goblet",
+        "ja": "雷討ちの器"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Thundersoother's Diadem",
+        "ja": "雷討ちの冠"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Tiny Miracle's Flower",
+        "ja": "奇跡の花"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Tiny Miracle's Feather",
+        "ja": "奇跡の羽根"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Tiny Miracle's Hourglass",
+        "ja": "奇跡の砂"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Tiny Miracle's Goblet",
+        "ja": "奇跡のコップ"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Tiny Miracle's Earrings",
+        "ja": "奇跡のピアス"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Traveling Doctor's Silver Lotus",
+        "ja": "医者のアネモネ"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Traveling Doctor's Owl Feather",
+        "ja": "医者の梟の羽根"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Traveling Doctor's Pocket Watch",
+        "ja": "医者の懐中時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Traveling Doctor's Medicine Pot",
+        "ja": "医者の薬壺"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Traveling Doctor's Handkerchief",
+        "ja": "医者の方巾"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Flowering Life",
+        "ja": "生霊の華"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Feather of Nascent Light",
+        "ja": "潜光の羽"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Solar Relic",
+        "ja": "陽轡の遺品"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Moment of the Pact",
+        "ja": "契約の時"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Thundering Poise",
+        "ja": "虺雷の姿"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "In Remembrance of Viridescent Fields",
+        "ja": "野花の記憶の草原"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Viridescent Arrow Feather",
+        "ja": "狩人の青緑色の矢羽"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Viridescent Venerer's Determination",
+        "ja": "緑の狩人の決心"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Viridescent Venerer's Vessel",
+        "ja": "緑の狩人の容器"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Viridescent Venerer's Diadem",
+        "ja": "緑の狩人の冠"
+      }
+    }
+  },
+  {
+    "flower": {
+      "name": {
+        "en": "Troupe's Dawnlight",
+        "ja": "楽団の朝の光"
+      }
+    },
+    "plume": {
+      "name": {
+        "en": "Bard's Arrow Feather",
+        "ja": "琴師の矢羽"
+      }
+    },
+    "sands": {
+      "name": {
+        "en": "Concert's Final Hour",
+        "ja": "フィナーレの時計"
+      }
+    },
+    "goblet": {
+      "name": {
+        "en": "Wanderer's String-Kettle",
+        "ja": "吟遊者の水筒"
+      }
+    },
+    "circlet": {
+      "name": {
+        "en": "Conductor's Top Hat",
+        "ja": "指揮者のハット"
+      }
+    }
+  }
+]
