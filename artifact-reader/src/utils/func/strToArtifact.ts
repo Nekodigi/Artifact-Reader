@@ -1,8 +1,8 @@
 import {
-  artifactKey,
-  artifactKeyType,
-  artifactPart,
-  artifactPartType,
+  setKey,
+  setKeyType,
+  slotKey,
+  slotKeyType,
 } from "../consts/Artifact";
 import { similarity } from "./string";
 import genshindb, { Language } from "genshin-db";
@@ -10,8 +10,8 @@ import { substatKey } from "../consts/Substat";
 import { statDef, statKey, statKeyType } from "../consts/Stat";
 
 export type str2artifactSetOut = {
-  key: artifactKeyType;
-  part: artifactPartType;
+  key: setKeyType;
+  part: slotKeyType;
   confidence: number;
 };
 export const str2artifactSet = (
@@ -19,14 +19,14 @@ export const str2artifactSet = (
   lang: Language
 ): str2artifactSetOut => {
   let maxSim = 0;
-  let key_: artifactKeyType = "Adventurer";
-  let part_: artifactPartType = "circlet";
+  let key_: setKeyType = "Adventurer";
+  let part_: slotKeyType = "circlet";
 
-  artifactKey.forEach((key) => {
+  setKey.forEach((key) => {
     let a = genshindb.artifacts(key, {
       resultLanguage: lang,
     })!;
-    artifactPart.forEach((part) => {
+    slotKey.forEach((part) => {
       if (a[part]) {
         let sim = similarity(str, a[part]!.name);
         if (sim > maxSim) {

@@ -1,32 +1,35 @@
 import cv, { MinMaxLoc, Rect } from "@techstark/opencv-js";
 import { Language } from "genshin-db";
 import Tesseract from "tesseract.js";
+import { setKeyType, slotKeyType } from "../consts/Artifact";
 import { statKeyType } from "../consts/Stat";
+import { ArtifactType } from "../types/Artifact";
+import { SubstatType } from "../types/Substat";
 import { isAlphabet } from "./string";
 import { str2artifactSet, str2stat, str2stats } from "./strToArtifact";
 
-export type ScanRes = {
-  value: string;
-  confidence: number;
-};
-export type ScanResNum = {
-  value: number;
-  confidence: number;
-};
-export type ScanResStat = {
-  key: statKeyType;
-  value: number;
-  confidence: number;
+export type ArtifactScanOut = {
+  setKey: ScanResSetKey;
+  rarity: ScanResNum;
+  level: ScanResNum;
+  slotKey: ScanResSlotKey;
+  mainstatKey: ScanResStatKey;
+  substats: ScanResStat[];
 };
 
-export type ArtifactScanOut = {
-  key: ScanRes;
-  part: ScanRes;
-  main: ScanResStat;
-  star: ScanResNum;
-  level: ScanResNum;
-  substat: ScanResStat[];
+export const ScanRes2GOOD = (scanned: ArtifactScanOut) => {
+  return {
+    setKey: scanned.setKey.key,
+    rarity: scanned.rarity.value,
+    level: scanned.level.value,
+    slotKey: scanned.slotKey.value,
+    mainstatKey: scanned.mainstatKey.key,
+    substats: scanned.substats.map((substat) => {
+      return { key: substat.key, value: substat.value } as SubstatType;
+    }),
+  } as ArtifactType;
 };
+
 export const ArtifactScan = async (
   src: cv.Mat,
   scale: number,
@@ -41,24 +44,25 @@ export const ArtifactScan = async (
     ? Language.English
     : Language.Japanese;
   let res = {} as ArtifactScanOut;
-  let keyPart = str2artifactSet(strs.name.value, lang);
-  res.key = { value: keyPart.key, confidence: keyPart.confidence };
-  res.part = { value: keyPart.part, confidence: keyPart.confidence };
-  let mainstat = str2stat(
-    strs.mainKey.value + "+" + strs.mainValue.value,
-    lang
-  );
-  res.main = mainstat;
-  res.star = {
+  let set = str2artifactSet(strs.name.value, lang);
+  res.setKey = { key: set.key, confidence: set.confidence };
+  res.rarity = {
     value: strs.star.value.replace(/\s/g, "").length,
     confidence: strs.star.confidence,
   };
+  //could compare with main stat and improve accuracy
   res.level = {
     value: Number(strs.level.value.replace(/^\D+/g, "")),
     confidence: strs.level.confidence,
   };
-  //need some fix
-  res.substat = str2stats(strs.substat.value, lang);
+  let mainstat = str2stat(
+    strs.mainKey.value + "+" + strs.mainValue.value,
+    lang
+  );
+  res.mainstatKey = { key: mainstat.key, confidence: mainstat.confidence };
+  res.slotKey = { value: set.part, confidence: set.confidence };
+
+  res.substats = str2stats(strs.substat.value, lang);
   return res;
 };
 
@@ -246,4 +250,34 @@ const imshowTrimmed = (
     threshold >= 0 ? cv.THRESH_BINARY : cv.THRESH_BINARY_INV
   );
   cv.imshow(ref.current!, i);
+};
+
+export type ScanRes = {
+  value: string;
+  confidence: number;
+};
+
+export type ScanResSlotKey = {
+  value: slotKeyType;
+  confidence: number;
+};
+export type ScanResNum = {
+  value: number;
+  confidence: number;
+};
+
+export type ScanResSetKey = {
+  key: setKeyType;
+  confidence: number;
+};
+
+export type ScanResStat = {
+  key: statKeyType;
+  value: number;
+  confidence: number;
+};
+
+export type ScanResStatKey = {
+  key: statKeyType;
+  confidence: number;
 };

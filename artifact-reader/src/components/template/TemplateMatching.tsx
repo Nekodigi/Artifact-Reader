@@ -2,9 +2,13 @@ import { Mat, MinMaxLoc, Rect } from "@techstark/opencv-js";
 import React, { useEffect, useRef, useState } from "react";
 import cv from "@techstark/opencv-js";
 import Tesseract from "tesseract.js";
-import { ArtifactScan, ArtifactScanStr } from "../../utils/func/artifactScan";
+import {
+  ArtifactScan,
+  ArtifactScanStr,
+  ScanRes2GOOD,
+} from "../../utils/func/artifactScan";
 import genshindb, { Language } from "genshin-db";
-import { artifactKey } from "../../utils/consts/Artifact";
+import { setKey } from "../../utils/consts/Artifact";
 import { similarity } from "../../utils/func/string";
 import {
   str2artifactSet,
@@ -110,6 +114,7 @@ export const TemplateMatching = () => {
         nameImgRef
       );
       console.log(res);
+      console.log(ScanRes2GOOD(res));
       //img will break after reading??
     };
     visualScan(img, templateImgs[1]!, templateImgs[0]!, templateImgs[2]!);
@@ -366,22 +371,9 @@ export const TemplateMatching = () => {
       </div>
 
       <div style={{ marginTop: "30px" }}>
-        <span style={{ marginRight: "10px" }}>Select an template file:</span>
-        <input
-          type="file"
-          name="file"
-          accept="image/*"
-          onChange={async (e) => {
-            if (e.target.files && e.target.files[0]) {
-              //setImgUrl(URL.createObjectURL(e.target.files[0]));
-              let i = await imreadUrl(URL.createObjectURL(e.target.files[0]));
-              setTemplateImgs([i]);
-
-              //processImage(e.target.files[0].arrayBuffer());
-              //processImageUrl(URL.createObjectURL(e.target.files[0]));
-            }
-          }}
-        />
+        <span style={{ marginRight: "10px" }}>
+          Open console.log to check result
+        </span>
       </div>
 
       <canvas ref={dummyImgRef} style={{ display: "none" }} />

@@ -1,4 +1,4 @@
-export const artifactKey = [
+export const setKey = [
   "Adventurer", //Adventurer
   "ArchaicPetra", //Archaic Petra
   "Berserker", //Berserker
@@ -43,16 +43,16 @@ export const artifactKey = [
   "ViridescentVenerer", //Viridescent Venerer
   "WanderersTroupe",
 ] as const;
-export type artifactKeyType = (typeof artifactKey)[number];
+export type setKeyType = typeof setKey[number];
 
-export const artifactPart = [
+export const slotKey = [
   "flower",
   "plume",
   "sands",
   "goblet",
   "circlet",
 ] as const;
-export type artifactPartType = (typeof artifactPart)[number];
+export type slotKeyType = typeof slotKey[number];
 
 //Wanderer's Troupe
 //   Adventurer: { name: { en: "Adventurer", ja: "" } },
