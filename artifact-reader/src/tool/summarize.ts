@@ -1,17 +1,12 @@
 import genshindb, { Language } from "genshin-db";
 import { setKey } from "../utils/consts/Artifact";
 import fs from "fs";
+import { ArtifactDB } from "../utils/types/Artifact";
 
 type ArtifactData = {
   name: { en: string; ja: string };
 };
-type ArtifactDB = {
-  flower?: ArtifactData;
-  plume?: ArtifactData;
-  sands?: ArtifactData;
-  goblet?: ArtifactData;
-  circlet: ArtifactData;
-};
+
 type extractArtifactSetOut = {
   [key: string]: ArtifactDB;
 };

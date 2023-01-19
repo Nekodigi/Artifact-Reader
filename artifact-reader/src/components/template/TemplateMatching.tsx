@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import cv from "@techstark/opencv-js";
 import Tesseract from "tesseract.js";
 import { ArtifactScan, ScanRes2GOOD } from "../../utils/func/artifactScan";
+import { Container, Typography } from "@mui/material";
 
 const TemplateMatching = () => {
   const targetImgRef = useRef<HTMLCanvasElement>(null);
@@ -24,6 +25,7 @@ const TemplateMatching = () => {
   const [star, setStar] = useState("star");
   const [level, setLevel] = useState("level");
   const [substat, setSubstat] = useState("substat");
+  const [good, setGood] = useState("");
 
   const [img, setImg] = useState<Mat | null>(null);
   const [templateImgs, setTemplateImgs] = useState<(Mat | null)[]>([
@@ -87,9 +89,11 @@ const TemplateMatching = () => {
       );
       console.log(res);
       console.log(ScanRes2GOOD(res));
+      setGood(JSON.stringify(ScanRes2GOOD(res), null, 4));
       //img will break after reading??
     };
-    visualScan(img, templateImgs[1]!, templateImgs[0]!, templateImgs[2]!);
+
+    //visualScan(img, templateImgs[1]!, templateImgs[0]!, templateImgs[2]!);
     t();
 
     //visualScan(img, templateImgs[1]!, templateImgs[0]!, templateImgs[2]!);
@@ -341,14 +345,16 @@ const TemplateMatching = () => {
           }}
         />
       </div>
-      <img src="/template/left.png" />
-      <img src="logo512.png" />
 
       <div style={{ marginTop: "30px" }}>
         <span style={{ marginRight: "10px" }}>
           Open console.log to check result
         </span>
       </div>
+
+      <Container maxWidth="xs">
+        <Typography textAlign="left">{good}</Typography>
+      </Container>
 
       <canvas ref={dummyImgRef} style={{ display: "none" }} />
       <div className="image-card">

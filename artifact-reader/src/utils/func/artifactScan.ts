@@ -1,9 +1,9 @@
 import cv, { MinMaxLoc, Rect } from "@techstark/opencv-js";
-import { Language } from "genshin-db";
 import Tesseract from "tesseract.js";
 import { setKeyType, slotKeyType } from "../consts/Artifact";
 import { statKeyType } from "../consts/Stat";
 import { ArtifactType } from "../types/Artifact";
+import { Language } from "../types/Language";
 import { SubstatType } from "../types/Substat";
 import { isAlphabet } from "./string";
 import { str2artifactSet, str2stat, str2stats } from "./strToArtifact";
@@ -40,9 +40,7 @@ export const ArtifactScan = async (
 ) => {
   let strs = await ArtifactScanStr(src, scale, left, right, mid, buf);
   console.log(strs);
-  let lang = isAlphabet(strs.name.value.charAt(0))
-    ? Language.English
-    : Language.Japanese;
+  let lang: Language = isAlphabet(strs.name.value.charAt(0)) ? "en" : "ja";
   let res = {} as ArtifactScanOut;
   let set = str2artifactSet(strs.name.value, lang);
   res.setKey = { key: set.key, confidence: set.confidence };

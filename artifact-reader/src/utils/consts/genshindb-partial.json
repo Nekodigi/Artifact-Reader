@@ -1,5 +1,5 @@
-[
-  {
+{
+  "Adventurer": {
     "flower": {
       "name": {
         "en": "Adventurer's Flower",
@@ -31,7 +31,7 @@
       }
     }
   },
-  {
+  "ArchaicPetra": {
     "flower": {
       "name": {
         "en": "Flower of Creviced Cliff",
@@ -63,7 +63,7 @@
       }
     }
   },
-  {
+  "Berserker": {
     "flower": {
       "name": {
         "en": "Berserker's Rose",
@@ -95,7 +95,7 @@
       }
     }
   },
-  {
+  "BlizzardStrayer": {
     "flower": {
       "name": {
         "en": "Snowswept Memory",
@@ -127,7 +127,7 @@
       }
     }
   },
-  {
+  "BloodstainedChivalry": {
     "flower": {
       "name": {
         "en": "Bloodstained Flower of Iron",
@@ -159,7 +159,7 @@
       }
     }
   },
-  {
+  "BraveHeart": {
     "flower": {
       "name": {
         "en": "Medal of the Brave",
@@ -191,7 +191,7 @@
       }
     }
   },
-  {
+  "CrimsonWitchOfFlames": {
     "flower": {
       "name": {
         "en": "Witch's Flower of Blaze",
@@ -223,7 +223,7 @@
       }
     }
   },
-  {
+  "DeepwoodMemories": {
     "flower": {
       "name": {
         "en": "Labyrinth Wayfarer",
@@ -255,7 +255,7 @@
       }
     }
   },
-  {
+  "DefendersWill": {
     "flower": {
       "name": {
         "en": "Guardian's Flower",
@@ -287,7 +287,7 @@
       }
     }
   },
-  {
+  "DesertPavilionChronicle": {
     "flower": {
       "name": {
         "en": "The First Days of the City of Kings",
@@ -319,7 +319,7 @@
       }
     }
   },
-  {
+  "EchoesOfAnOffering": {
     "flower": {
       "name": {
         "en": "Soulscent Bloom",
@@ -351,7 +351,7 @@
       }
     }
   },
-  {
+  "EmblemOfSeveredFate": {
     "flower": {
       "name": {
         "en": "Magnificent Tsuba",
@@ -383,7 +383,7 @@
       }
     }
   },
-  {
+  "FlowerOfParadiseLost": {
     "flower": {
       "name": {
         "en": "Ay-Khanoum's Myriad",
@@ -415,7 +415,7 @@
       }
     }
   },
-  {
+  "Gambler": {
     "flower": {
       "name": {
         "en": "Gambler's Brooch",
@@ -447,7 +447,7 @@
       }
     }
   },
-  {
+  "GildedDreams": {
     "flower": {
       "name": {
         "en": "Dreaming Steelbloom",
@@ -479,7 +479,7 @@
       }
     }
   },
-  {
+  "GladiatorsFinale": {
     "flower": {
       "name": {
         "en": "Gladiator's Nostalgia",
@@ -511,7 +511,7 @@
       }
     }
   },
-  {
+  "HeartOfDepth": {
     "flower": {
       "name": {
         "en": "Gilded Corsage",
@@ -543,7 +543,7 @@
       }
     }
   },
-  {
+  "HuskOfOpulentDreams": {
     "flower": {
       "name": {
         "en": "Bloom Times",
@@ -575,7 +575,7 @@
       }
     }
   },
-  {
+  "Instructor": {
     "flower": {
       "name": {
         "en": "Instructor's Brooch",
@@ -607,7 +607,7 @@
       }
     }
   },
-  {
+  "Lavawalker": {
     "flower": {
       "name": {
         "en": "Lavawalker's Resolution",
@@ -639,7 +639,7 @@
       }
     }
   },
-  {
+  "LuckyDog": {
     "flower": {
       "name": {
         "en": "Lucky Dog's Clover",
@@ -671,7 +671,7 @@
       }
     }
   },
-  {
+  "MaidenBeloved": {
     "flower": {
       "name": {
         "en": "Maiden's Distant Love",
@@ -703,7 +703,7 @@
       }
     }
   },
-  {
+  "MartialArtist": {
     "flower": {
       "name": {
         "en": "Martial Artist's Red Flower",
@@ -735,7 +735,7 @@
       }
     }
   },
-  {
+  "NoblesseOblige": {
     "flower": {
       "name": {
         "en": "Royal Flora",
@@ -767,7 +767,7 @@
       }
     }
   },
-  {
+  "OceanHuedClam": {
     "flower": {
       "name": {
         "en": "Sea-Dyed Blossom",
@@ -799,7 +799,7 @@
       }
     }
   },
-  {
+  "PaleFlame": {
     "flower": {
       "name": {
         "en": "Stainless Bloom",
@@ -831,7 +831,7 @@
       }
     }
   },
-  {
+  "PrayersForDestiny": {
     "circlet": {
       "name": {
         "en": "Tiara of Torrents",
@@ -839,7 +839,7 @@
       }
     }
   },
-  {
+  "PrayersForIllumination": {
     "circlet": {
       "name": {
         "en": "Tiara of Flame",
@@ -847,7 +847,7 @@
       }
     }
   },
-  {
+  "PrayersForWisdom": {
     "circlet": {
       "name": {
         "en": "Tiara of Thunder",
@@ -855,7 +855,7 @@
       }
     }
   },
-  {
+  "PrayersToSpringtime": {
     "circlet": {
       "name": {
         "en": "Tiara of Frost",
@@ -863,7 +863,7 @@
       }
     }
   },
-  {
+  "ResolutionOfSojourner": {
     "flower": {
       "name": {
         "en": "Heart of Comradeship",
@@ -895,7 +895,7 @@
       }
     }
   },
-  {
+  "RetracingBolide": {
     "flower": {
       "name": {
         "en": "Summer Night's Bloom",
@@ -927,7 +927,7 @@
       }
     }
   },
-  {
+  "Scholar": {
     "flower": {
       "name": {
         "en": "Scholar's Bookmark",
@@ -959,7 +959,7 @@
       }
     }
   },
-  {
+  "ShimenawasReminiscence": {
     "flower": {
       "name": {
         "en": "Entangling Bloom",
@@ -991,7 +991,7 @@
       }
     }
   },
-  {
+  "TenacityOfTheMillelith": {
     "flower": {
       "name": {
         "en": "Flower of Accolades",
@@ -1023,7 +1023,7 @@
       }
     }
   },
-  {
+  "TheExile": {
     "flower": {
       "name": {
         "en": "Exile's Flower",
@@ -1055,7 +1055,7 @@
       }
     }
   },
-  {
+  "ThunderingFury": {
     "flower": {
       "name": {
         "en": "Thunderbird's Mercy",
@@ -1087,7 +1087,7 @@
       }
     }
   },
-  {
+  "Thundersoother": {
     "flower": {
       "name": {
         "en": "Thundersoother's Heart",
@@ -1119,7 +1119,7 @@
       }
     }
   },
-  {
+  "TinyMiracle": {
     "flower": {
       "name": {
         "en": "Tiny Miracle's Flower",
@@ -1151,7 +1151,7 @@
       }
     }
   },
-  {
+  "TravelingDoctor": {
     "flower": {
       "name": {
         "en": "Traveling Doctor's Silver Lotus",
@@ -1183,7 +1183,7 @@
       }
     }
   },
-  {
+  "VermillionHereafter": {
     "flower": {
       "name": {
         "en": "Flowering Life",
@@ -1215,7 +1215,7 @@
       }
     }
   },
-  {
+  "ViridescentVenerer": {
     "flower": {
       "name": {
         "en": "In Remembrance of Viridescent Fields",
@@ -1247,7 +1247,7 @@
       }
     }
   },
-  {
+  "WanderersTroupe": {
     "flower": {
       "name": {
         "en": "Troupe's Dawnlight",
@@ -1279,4 +1279,4 @@
       }
     }
   }
-]
+}

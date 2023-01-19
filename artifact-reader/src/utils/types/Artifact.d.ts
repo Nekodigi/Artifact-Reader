@@ -20,6 +20,13 @@ type Scores = {
   avgScore: number;
   maxScore: number;
 };
+export type ArtifactDB = {
+  flower?: ArtifactData;
+  plume?: ArtifactData;
+  sands?: ArtifactData;
+  goblet?: ArtifactData;
+  circlet: ArtifactData;
+};
 
 export type { ArtifactValue, Scores };
 

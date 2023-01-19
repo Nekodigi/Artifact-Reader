@@ -1,19 +1,18 @@
-import {
-  setKey,
-  setKeyType,
-  slotKey,
-  slotKeyType,
-} from "../consts/Artifact";
+import { setKey, setKeyType, slotKey, slotKeyType } from "../consts/Artifact";
 import { similarity } from "./string";
-import { Language, artifacts } from "genshin-db";
+//import { Language } from "genshin-db";
+import artifacts from "../consts/genshindb-partial.json";
 import { substatKey } from "../consts/Substat";
 import { statDef, statKey, statKeyType } from "../consts/Stat";
+import { Language } from "../types/Language";
+import { ArtifactDB } from "../types/Artifact";
 
 export type str2artifactSetOut = {
   key: setKeyType;
   part: slotKeyType;
   confidence: number;
 };
+
 export const str2artifactSet = (
   str: string,
   lang: Language
@@ -23,12 +22,13 @@ export const str2artifactSet = (
   let part_: slotKeyType = "circlet";
 
   setKey.forEach((key) => {
-    let a = artifacts(key, {
-      resultLanguage: lang,
-    })!;
+    // let a = artifacts(key, {
+    //   resultLanguage: lang,
+    // })!;
+    let a = artifacts[key] as ArtifactDB;
     slotKey.forEach((part) => {
-      if (a[part]) {
-        let sim = similarity(str, a[part]!.name);
+      if (a[part] !== undefined) {
+        let sim = similarity(str, a[part]!.name[lang]);
         if (sim > maxSim) {
           key_ = key;
           part_ = part;
@@ -65,8 +65,6 @@ export const str2stats = (str: string, lang: Language): str2statOut[] => {
 };
 
 export const str2stat = (str: string, lang: Language): str2statOut => {
-  let l: "en" | "ja" = lang === Language.English ? "en" : "ja";
-
   let datas = str.split("+"); //plus could be lost
   if (datas.length === 1) {
     console.log("+ error");
@@ -102,10 +100,10 @@ export const str2stat = (str: string, lang: Language): str2statOut => {
   replaceList.forEach((replaceItem) => {
     value_ = value_.replaceAll(replaceItem[0], replaceItem[1]);
   });
-  
-  if (l === "en") {
+
+  if (lang === "en") {
     statKey.forEach((key_i) => {
-      let sim = similarity(statDef[key_i as statKeyType].name[l], key_);
+      let sim = similarity(statDef[key_i as statKeyType].name[lang], key_);
       if (sim > maxSim) {
         key = key_i as statKeyType;
         maxSim = sim;
@@ -117,7 +115,7 @@ export const str2stat = (str: string, lang: Language): str2statOut => {
     //some letter could be lost.
     //use nearest!
     statKey.forEach((key_i) => {
-      let sim = similarity(statDef[key_i as statKeyType].name[l], key_);
+      let sim = similarity(statDef[key_i as statKeyType].name[lang], key_);
       if (sim > maxSim) {
         key = key_i as statKeyType;
         maxSim = sim;
@@ -129,7 +127,7 @@ export const str2stat = (str: string, lang: Language): str2statOut => {
   console.log(key_, value_, value, key);
 
   statKey.forEach((key_) => {
-    let sim = similarity(statDef[key_ as statKeyType].name[l], str);
+    let sim = similarity(statDef[key_ as statKeyType].name[lang], str);
     if (sim > maxSim) {
       key = key_ as statKeyType;
       maxSim = sim;
