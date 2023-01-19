@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 //import { TemplateMatching } from "./components/template/TemplateMatching";
 import { Typography } from "@mui/material";
+import { extractArtifactSet } from "./tool/summarize";
 const TemplateMatching = lazy(
   () => import("./components/template/TemplateMatching")
 );

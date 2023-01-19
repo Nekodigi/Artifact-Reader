@@ -14,7 +14,7 @@ type ArtifactDB = {
 type extractArtifactSetOut = {
   [key: string]: ArtifactDB;
 };
-const extractArtifactSet = () => {
+export const extractArtifactSet = () => {
   let dbs = setKey.map((key) => {
     let set = genshindb.artifacts(key)!;
     let db: ArtifactDB = {
