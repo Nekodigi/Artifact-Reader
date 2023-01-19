@@ -2,21 +2,10 @@ import { Mat, MinMaxLoc, Rect } from "@techstark/opencv-js";
 import React, { useEffect, useRef, useState } from "react";
 import cv from "@techstark/opencv-js";
 import Tesseract from "tesseract.js";
-import {
-  ArtifactScan,
-  ArtifactScanStr,
-  ScanRes2GOOD,
-} from "../../utils/func/artifactScan";
+import { ArtifactScan, ScanRes2GOOD } from "../../utils/func/artifactScan";
 import genshindb, { Language } from "genshin-db";
-import { setKey } from "../../utils/consts/Artifact";
-import { similarity } from "../../utils/func/string";
-import {
-  str2artifactSet,
-  str2stat,
-  str2stats,
-} from "../../utils/func/strToArtifact";
 
-export const TemplateMatching = () => {
+const TemplateMatching = () => {
   const targetImgRef = useRef<HTMLCanvasElement>(null);
   const templateImgRef = useRef<HTMLCanvasElement>(null);
   const slimImgRef = useRef<HTMLCanvasElement>(null);
@@ -52,22 +41,6 @@ export const TemplateMatching = () => {
   //slim width: 272? padding: 20
 
   let scale = 1.5; //small faster large precise
-
-  useEffect(() => {
-    console.log(genshindb.artifacts("BloodstainedChivalry"));
-    let str = "Flower of Creviced Cliff";
-    const startTime = performance.now();
-
-    let t = str2stats(
-      "会 心 ダ メ ー ジ +⑤.④%\n攻 撃 カ +④.①%\n防 御 カ +⑥.⑥%",
-      Language.Japanese
-    );
-    console.log(t);
-
-    let res = str2artifactSet("迷唇の遊密", Language.Japanese);
-    console.log(res);
-    console.log(performance.now() - startTime);
-  }, []);
 
   useEffect(() => {
     if (img === null || templateImgs[0] !== null) return;
@@ -413,7 +386,7 @@ export const TemplateMatching = () => {
 
       <div className="image-card">
         <div style={{ margin: "10px" }}>↓↓↓ The target image ↓↓↓</div>
-        <canvas ref={targetImgRef} />
+        <canvas ref={targetImgRef} style={{ maxWidth: "80vw" }} />
       </div>
       <div className="image-card">
         <div style={{ margin: "10px" }}>↓↓↓ The slim image ↓↓↓</div>
@@ -426,3 +399,5 @@ export const TemplateMatching = () => {
     </div>
   );
 };
+
+export default TemplateMatching;
