@@ -218,6 +218,7 @@ export const ArtifactScanStr = async (
     cv.rectangle(trimmedImg, substat1p, substat2p, color, 2, cv.LINE_8, 0);
   };
 
+  console.log("Start tesseract");
   await Promise.all([
     fname(),
     fpart(),
@@ -227,6 +228,7 @@ export const ArtifactScanStr = async (
     flevel(),
     fsubstat(),
   ]);
+  console.log("end tesseract");
   return res;
 };
 
