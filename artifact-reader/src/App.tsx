@@ -1,6 +1,5 @@
 import React, { lazy, Suspense, useEffect } from "react";
 import "./App.css";
-//import { TemplateMatching } from "./components/template/TemplateMatching";
 import { Typography } from "@mui/material";
 const TemplateMatching = lazy(
   () => import("./components/template/TemplateMatching")
