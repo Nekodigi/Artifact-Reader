@@ -166,13 +166,13 @@ export const ArtifactScanStr = async (
     imshowTrimmed(buf, trimmedImg, 0.75, -180, name1p, name2p);
     let result = await Tesseract.recognize(buf.current!.toDataURL(), "jpn");
     res.name = { value: result.data.text, confidence: result.data.confidence };
-    cv.rectangle(trimmedImg, name1p, name2p, color, 2, cv.LINE_8, 0);
+    //cv.rectangle(trimmedImg, name1p, name2p, color, 2, cv.LINE_8, 0);
   };
   const fpart = async () => {
     imshowTrimmed(buf, trimmedImg, 1, -180, part1p, part2p);
     let result = await Tesseract.recognize(buf.current!.toDataURL(), "jpn");
     res.part = { value: result.data.text, confidence: result.data.confidence };
-    cv.rectangle(trimmedImg, part1p, part2p, color, 2, cv.LINE_8, 0);
+    //cv.rectangle(trimmedImg, part1p, part2p, color, 2, cv.LINE_8, 0);
   };
 
   const fmainKey = async () => {
@@ -182,7 +182,7 @@ export const ArtifactScanStr = async (
       value: result.data.text,
       confidence: result.data.confidence,
     };
-    cv.rectangle(trimmedImg, mainKey1p, mainKey2p, color, 2, cv.LINE_8, 0);
+    //cv.rectangle(trimmedImg, mainKey1p, mainKey2p, color, 2, cv.LINE_8, 0);
   };
   const fmainValue = async () => {
     imshowTrimmed(buf, trimmedImg, 0.75, -180, mainValue1p, mainValue2p);
@@ -191,21 +191,21 @@ export const ArtifactScanStr = async (
       value: result.data.text,
       confidence: result.data.confidence,
     };
-    cv.rectangle(trimmedImg, mainValue1p, mainValue2p, color, 2, cv.LINE_8, 0);
+    //cv.rectangle(trimmedImg, mainValue1p, mainValue2p, color, 2, cv.LINE_8, 0);
   };
 
   const fstar = async () => {
     imshowTrimmed(buf, trimmedImg, 1, -150, star1p, star2p);
     let result = await Tesseract.recognize(buf.current!.toDataURL(), "chi_tra");
     res.star = { value: result.data.text, confidence: result.data.confidence };
-    cv.rectangle(trimmedImg, star1p, star2p, color, 2, cv.LINE_8, 0);
+    //cv.rectangle(trimmedImg, star1p, star2p, color, 2, cv.LINE_8, 0);
   };
 
   const flevel = async () => {
     imshowTrimmed(buf, trimmedImg, 1, -150, level1p, level2p);
     let result = await Tesseract.recognize(buf.current!.toDataURL()); //nograyscale
     res.level = { value: result.data.text, confidence: result.data.confidence };
-    cv.rectangle(trimmedImg, level1p, level2p, color, 2, cv.LINE_8, 0);
+    //cv.rectangle(trimmedImg, level1p, level2p, color, 2, cv.LINE_8, 0);
   };
 
   const fsubstat = async () => {
@@ -215,18 +215,18 @@ export const ArtifactScanStr = async (
       value: result.data.text,
       confidence: result.data.confidence,
     };
-    cv.rectangle(trimmedImg, substat1p, substat2p, color, 2, cv.LINE_8, 0);
+    //cv.rectangle(trimmedImg, substat1p, substat2p, color, 2, cv.LINE_8, 0);
   };
 
   console.log("Start tesseract");
   await Promise.all([
     fname(),
-    fpart(),
-    fmainKey(),
-    fmainValue(),
-    fstar(),
-    flevel(),
-    fsubstat(),
+    // fpart(),
+    // fmainKey(),
+    // fmainValue(),
+    // fstar(),
+    // flevel(),
+    // fsubstat(),
   ]);
   console.log("end tesseract");
   return res;
