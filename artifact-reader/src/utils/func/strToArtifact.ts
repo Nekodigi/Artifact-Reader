@@ -9,7 +9,7 @@ import { ArtifactDB } from "../types/Artifact";
 
 export type str2artifactSetOut = {
   key: setKeyType;
-  part: slotKeyType;
+  slot: slotKeyType;
   confidence: number;
 };
 
@@ -19,25 +19,25 @@ export const str2artifactSet = (
 ): str2artifactSetOut => {
   let maxSim = 0;
   let key_: setKeyType = "Adventurer";
-  let part_: slotKeyType = "circlet";
+  let slot_: slotKeyType = "circlet";
 
   setKey.forEach((key) => {
     // let a = artifacts(key, {
     //   resultLanguage: lang,
     // })!;
     let a = artifacts[key] as ArtifactDB;
-    slotKey.forEach((part) => {
-      if (a[part] !== undefined) {
-        let sim = similarity(str, a[part]!.name[lang]);
+    slotKey.forEach((slot) => {
+      if (a[slot] !== undefined) {
+        let sim = similarity(str, a[slot]!.name[lang]);
         if (sim > maxSim) {
           key_ = key;
-          part_ = part;
+          slot_ = slot;
           maxSim = sim;
         }
       }
     });
   });
-  return { key: key_, part: part_, confidence: maxSim };
+  return { key: key_, slot: slot_, confidence: maxSim };
 };
 
 export type str2statOut = {

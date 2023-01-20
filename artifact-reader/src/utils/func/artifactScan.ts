@@ -58,7 +58,7 @@ export const ArtifactScan = async (
     lang
   );
   res.mainstatKey = { key: mainstat.key, confidence: mainstat.confidence };
-  res.slotKey = { value: set.part, confidence: set.confidence };
+  res.slotKey = { value: set.slot, confidence: set.confidence };
 
   res.substats = str2stats(strs.substat.value, lang);
   return res;
@@ -67,7 +67,7 @@ export const ArtifactScan = async (
 //scale change sample size: larger precise, smaller faster
 export type ArtifactScanStrOut = {
   name: ScanRes;
-  part: ScanRes;
+  slot: ScanRes;
   mainKey: ScanRes;
   mainValue: ScanRes;
   star: ScanRes;
@@ -163,15 +163,18 @@ export const ArtifactScanStr = async (
   console.log("showTextImg");
 
   const fname = async () => {
+    
     imshowTrimmed(buf, trimmedImg, 0.75, -180, name1p, name2p);
     let result = await Tesseract.recognize(buf.current!.toDataURL(), "jpn");
     res.name = { value: result.data.text, confidence: result.data.confidence };
+    console.log("name fin");
     //cv.rectangle(trimmedImg, name1p, name2p, color, 2, cv.LINE_8, 0);
   };
-  const fpart = async () => {
+  const fslot = async () => {
     imshowTrimmed(buf, trimmedImg, 1, -180, part1p, part2p);
     let result = await Tesseract.recognize(buf.current!.toDataURL(), "jpn");
-    res.part = { value: result.data.text, confidence: result.data.confidence };
+    res.slot = { value: result.data.text, confidence: result.data.confidence };
+    console.log("slot fin");
     //cv.rectangle(trimmedImg, part1p, part2p, color, 2, cv.LINE_8, 0);
   };
 
@@ -221,12 +224,12 @@ export const ArtifactScanStr = async (
   console.log("Start tesseract");
   await Promise.all([
     fname(),
-    // fpart(),
-    // fmainKey(),
-    // fmainValue(),
-    // fstar(),
-    // flevel(),
-    // fsubstat(),
+    fslot(),
+    fmainKey(),
+    fmainValue(),
+    fstar(),
+    flevel(),
+    fsubstat(),
   ]);
   console.log("end tesseract");
   return res;
