@@ -165,8 +165,8 @@ export const ArtifactScanStr = async (
   const worker = await createWorker({
     logger: (m) => console.log(m), // Add logger here
   });
-  await worker.loadLanguage("eng+jpn+chi_tra");
-  await worker.initialize("eng+jpn+chi_tra");
+  await worker.loadLanguage("eng");
+  await worker.initialize("eng");
   console.log("worker initialized");
   const fname = async () => {
     console.log("name trim");
