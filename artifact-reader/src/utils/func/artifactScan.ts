@@ -163,7 +163,7 @@ export const ArtifactScanStr = async (
   console.log("showTextImg");
 
   const worker = await createWorker({
-    logger: m => console.log(m), // Add logger here
+    logger: (m) => console.log(m), // Add logger here
   });
   await worker.loadLanguage("eng+jpn+chi_tra");
   await worker.initialize("eng+jpn+chi_tra");
@@ -227,15 +227,19 @@ export const ArtifactScanStr = async (
   };
 
   console.log("Start tesseract");
-  await Promise.all([
-    fname(),
-    fslot(),
-    fmainKey(),
-    fmainValue(),
-    fstar(),
-    flevel(),
-    fsubstat(),
-  ]);
+  await fname();
+  console.log("name end");
+  await fslot();
+  console.log("slot end");
+  await fmainKey();
+  await fmainValue();
+  console.log("main value end");
+  await fstar();
+  await flevel();
+  await fsubstat();
+  console.log("read end");
+  await worker.terminate();
+
   console.log("end tesseract");
   return res;
 };
