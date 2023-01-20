@@ -169,8 +169,11 @@ export const ArtifactScanStr = async (
   await worker.initialize("eng+jpn+chi_tra");
   console.log("worker initialized");
   const fname = async () => {
+    console.log("name trim");
     imshowTrimmed(buf, trimmedImg, 0.75, -180, name1p, name2p);
+    console.log("name recog");
     let result = await worker.recognize(buf.current!.toDataURL()); //, "jpn"
+    console.log("name recog fin");
     res.name = { value: result.data.text, confidence: result.data.confidence };
     console.log("name fin");
     //cv.rectangle(trimmedImg, name1p, name2p, color, 2, cv.LINE_8, 0);

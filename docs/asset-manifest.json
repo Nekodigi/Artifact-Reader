@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/Artifact-Reader/static/css/main.cc6dc974.css",
-    "main.js": "/Artifact-Reader/static/js/main.fa325efd.js",
-    "static/js/747.925a3ad5.chunk.js": "/Artifact-Reader/static/js/747.925a3ad5.chunk.js",
+    "main.js": "/Artifact-Reader/static/js/main.1054e256.js",
+    "static/js/747.88afceb5.chunk.js": "/Artifact-Reader/static/js/747.88afceb5.chunk.js",
     "static/js/787.da8d3254.chunk.js": "/Artifact-Reader/static/js/787.da8d3254.chunk.js",
     "static/js/909.88be7db0.chunk.js": "/Artifact-Reader/static/js/909.88be7db0.chunk.js",
     "index.html": "/Artifact-Reader/index.html",
     "main.cc6dc974.css.map": "/Artifact-Reader/static/css/main.cc6dc974.css.map",
-    "main.fa325efd.js.map": "/Artifact-Reader/static/js/main.fa325efd.js.map",
-    "747.925a3ad5.chunk.js.map": "/Artifact-Reader/static/js/747.925a3ad5.chunk.js.map",
+    "main.1054e256.js.map": "/Artifact-Reader/static/js/main.1054e256.js.map",
+    "747.88afceb5.chunk.js.map": "/Artifact-Reader/static/js/747.88afceb5.chunk.js.map",
     "787.da8d3254.chunk.js.map": "/Artifact-Reader/static/js/787.da8d3254.chunk.js.map",
     "909.88be7db0.chunk.js.map": "/Artifact-Reader/static/js/909.88be7db0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cc6dc974.css",
-    "static/js/main.fa325efd.js"
+    "static/js/main.1054e256.js"
   ]
 }
