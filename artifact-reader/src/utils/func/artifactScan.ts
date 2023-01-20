@@ -1,5 +1,5 @@
 import cv, { MinMaxLoc, Rect } from "@techstark/opencv-js";
-import Tesseract from "tesseract.js";
+import Tesseract, { createWorker } from "tesseract.js";
 import { setKeyType, slotKeyType } from "../consts/Artifact";
 import { statKeyType } from "../consts/Stat";
 import { ArtifactType } from "../types/Artifact";
@@ -162,17 +162,22 @@ export const ArtifactScanStr = async (
 
   console.log("showTextImg");
 
+  const worker = await createWorker({
+    logger: m => console.log(m), // Add logger here
+  });
+  await worker.loadLanguage("eng+jpn+chi_tra");
+  await worker.initialize("eng+jpn+chi_tra");
+  console.log("worker initialized");
   const fname = async () => {
-    
     imshowTrimmed(buf, trimmedImg, 0.75, -180, name1p, name2p);
-    let result = await Tesseract.recognize(buf.current!.toDataURL(), "jpn");
+    let result = await worker.recognize(buf.current!.toDataURL()); //, "jpn"
     res.name = { value: result.data.text, confidence: result.data.confidence };
     console.log("name fin");
     //cv.rectangle(trimmedImg, name1p, name2p, color, 2, cv.LINE_8, 0);
   };
   const fslot = async () => {
     imshowTrimmed(buf, trimmedImg, 1, -180, part1p, part2p);
-    let result = await Tesseract.recognize(buf.current!.toDataURL(), "jpn");
+    let result = await worker.recognize(buf.current!.toDataURL()); //, "jpn"
     res.slot = { value: result.data.text, confidence: result.data.confidence };
     console.log("slot fin");
     //cv.rectangle(trimmedImg, part1p, part2p, color, 2, cv.LINE_8, 0);
@@ -180,7 +185,7 @@ export const ArtifactScanStr = async (
 
   const fmainKey = async () => {
     imshowTrimmed(buf, trimmedImg, 1, -135, mainKey1p, mainKey2p);
-    let result = await Tesseract.recognize(buf.current!.toDataURL(), "jpn"); //nograyscale
+    let result = await worker.recognize(buf.current!.toDataURL()); //, "jpn" //nograyscale
     res.mainKey = {
       value: result.data.text,
       confidence: result.data.confidence,
@@ -189,7 +194,7 @@ export const ArtifactScanStr = async (
   };
   const fmainValue = async () => {
     imshowTrimmed(buf, trimmedImg, 0.75, -180, mainValue1p, mainValue2p);
-    let result = await Tesseract.recognize(buf.current!.toDataURL());
+    let result = await worker.recognize(buf.current!.toDataURL());
     res.mainValue = {
       value: result.data.text,
       confidence: result.data.confidence,
@@ -199,21 +204,21 @@ export const ArtifactScanStr = async (
 
   const fstar = async () => {
     imshowTrimmed(buf, trimmedImg, 1, -150, star1p, star2p);
-    let result = await Tesseract.recognize(buf.current!.toDataURL(), "chi_tra");
+    let result = await worker.recognize(buf.current!.toDataURL()); //, "chi_tra"
     res.star = { value: result.data.text, confidence: result.data.confidence };
     //cv.rectangle(trimmedImg, star1p, star2p, color, 2, cv.LINE_8, 0);
   };
 
   const flevel = async () => {
     imshowTrimmed(buf, trimmedImg, 1, -150, level1p, level2p);
-    let result = await Tesseract.recognize(buf.current!.toDataURL()); //nograyscale
+    let result = await worker.recognize(buf.current!.toDataURL()); //nograyscale
     res.level = { value: result.data.text, confidence: result.data.confidence };
     //cv.rectangle(trimmedImg, level1p, level2p, color, 2, cv.LINE_8, 0);
   };
 
   const fsubstat = async () => {
     imshowTrimmed(buf, trimmedImg, 1, 140, substat1p, substat2p);
-    let result = await Tesseract.recognize(buf.current!.toDataURL(), "jpn");
+    let result = await worker.recognize(buf.current!.toDataURL()); //, "jpn"
     res.substat = {
       value: result.data.text,
       confidence: result.data.confidence,
